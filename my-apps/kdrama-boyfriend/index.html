@@ -59,13 +59,25 @@
         </script>
         <h1 id="fb-welcome"></h1>
         <h1>Who is your k-drama boyfriend?</h1>
-        <div id="result"><span id="res-name"></span> in <span id="res-drama"></span></div> <img alt="image" id="res-image" width="200"> </body>
-    <script src="data.js"></script>
-    <script>
-        var obj = data[1];
-        document.getElementById("res-name").innerHTML = obj.name;
-        document.getElementById("res-drama").innerHTML = obj.drama;
-        document.getElementById("res-image").src = obj.image;
-    </script>
+        <div id="result"><span id="res-name"></span> in <span id="res-drama"></span></div> <img alt="image" id="res-image" width="200">
+        <button>dfsdsds</button>
+        <script src="data.js"></script>
+        <script>
+            var obj = data[1];
+            document.getElementById("res-name").innerHTML = obj.name;
+            document.getElementById("res-drama").innerHTML = obj.drama;
+            document.getElementById("res-image").src = obj.image;
+        </script>
+        <script>
+            $("button").click(function () {
+                $.post("demo_test.asp", {
+                    name: "Donald Duck"
+                    , city: "Duckburg"
+                }, function (data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+            });
+        </script>
+    </body>
 
     </html>
